@@ -47,6 +47,7 @@ header{
 .dropdownbutton__bar{
 position: relative;    
 }
+
 nav{
     width: 100%;
 }
@@ -54,6 +55,7 @@ nav{
 .list{
     display: none;
 }
+
 .list__item{
     border-bottom: 4px solid transparent;
     padding: 27px;
@@ -95,6 +97,7 @@ nav{
     font-size: 16px;
     line-height: 23px;
     text-align: center;
+    padding: 20px 34px;
 }
 
 .main__text button{
@@ -124,7 +127,7 @@ font-size: 30px;
 line-height: 45px;
 text-align: center;
 margin-bottom: 25px;
-
+margin-left: 20px;
 }
 
 
@@ -265,7 +268,7 @@ margin-bottom: 25px;
 /*CONTENEDOR GRID*/
 
 .grid{
-    
+    padding-top: 40px;
     width: 100%;
     height: auto;
     display: flex;
@@ -290,6 +293,11 @@ margin-bottom: 25px;
     position: relative;
 }
 
+hr{
+    display: none;
+    margin-left: 0;
+    width: 75%;
+}
 
 /*GRIDS INDIVIDUALES*/
 
@@ -302,6 +310,7 @@ margin-bottom: 25px;
 
 .grid__containers-card1-div-img{
     position: relative;
+    padding-top: 5px;
 }
 
 .grid__containers-card1-div-circle{
@@ -315,6 +324,7 @@ margin-bottom: 25px;
     left: 25px;
     bottom: 33px;
     transform: rotate(45deg);
+    padding-top: 42px;
 
   
 }
@@ -338,6 +348,7 @@ margin-bottom: 25px;
 
 .grid__containers-card2-div-img{
     position: relative;
+    padding-top: 5px;
 }
 
 .grid__containers-card2-div-circle{
@@ -361,7 +372,8 @@ margin-bottom: 25px;
 
 /*CARD 3*/
 #card-3{
-    margin-bottom: -63px;
+    margin-bottom: -133px;
+    padding-top: 5px;
 }
 
 .grid__containers-card3-tit{
@@ -381,7 +393,7 @@ margin-bottom: 25px;
     height: 195px;
     background-color: #55DFB4;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
 }
 
@@ -398,7 +410,7 @@ margin-bottom: 25px;
     line-height: 42.26px;
     text-align: center;
     position: relative;
-
+    padding-top: 43px;
 }
 
 
@@ -416,11 +428,11 @@ margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -19px;
 }
 
 /*para colo cada tarjeta*/
 .last__prices-containers{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -501,8 +513,8 @@ margin-bottom: 25px;
 /*SEGUNDO CUADRO*/
 
 .last__prices-profe{
-    width: 339px;
-    height: 277px;
+    width: 293px;
+    height: 251px;
     border:1px solid #07ACE6;
     border-radius: 18px;
     display: grid;
@@ -510,7 +522,6 @@ margin-bottom: 25px;
     grid-template-rows: 90% 10%;
     position: relative;
 }
-
 
 .last__prices-profe-left{
     display: flex;
@@ -560,8 +571,8 @@ margin-bottom: 25px;
 
 .last__prices-profe-button{
     position: absolute;
-    margin-top:251px;
-    margin-left:95px;
+    margin-top:225px;
+    margin-left:71.5px;
     width: 150px;
     height: 50px;
     background-color: #07ACE6;
@@ -571,6 +582,8 @@ margin-bottom: 25px;
     border: #07ACE6;
 
 }
+
+
 
 
 /*TERCER CUADRO*/
@@ -676,6 +689,7 @@ margin-bottom: 25px;
 .last__pregform-preg-text h2{
     font-size: 40px;
     line-height: 46.96px;
+    padding-bottom: ;
    
 }
 
@@ -688,6 +702,9 @@ margin-bottom: 25px;
 .last__pregform-preg-info{
     display: flex;
     flex-direction: column;
+}
+.last__pregform-preg-info-container2{
+    margin-top:10px;
 }
 .last__pregform-preg-info-container2 a{
     color: #A5A5A5;
@@ -708,7 +725,7 @@ margin-bottom: 25px;
 
 .last__pregform-form{
     width: 314px;
-    height: 370px;
+    height: 450px;
 }
 .last__pregform-form-formu{
     position: relative;
@@ -723,12 +740,14 @@ margin-bottom: 25px;
         font-weight: bolder;
         display: flex;
         flex-direction: column;
+        padding-bottom: 30px;
+
 
 }   
 
 .last__pregform-form-formu input{
     border: none;
-    border-bottom: 2px solid rgb(128, 128, 128);
+    border-bottom: 1px solid rgb(128, 128, 128);
 }
 
 .last__pregform-form-formu-aceptar{
@@ -744,7 +763,7 @@ margin-bottom: 25px;
 }
 
 .last__pregform-form-formu-aceptar input{
-    top: 260px;
+    top: 356px;
     left: 87px;
     width: 226px;
     height: 57px;
@@ -776,14 +795,20 @@ footer{
     padding-right: 30px;
 }
 .footer__imgs :first-child{
-    margin-right: 20px;
-    
+    margin-right: 8px;
 }
-
+#logo2{
+    color: #08A6E4;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-left: 25px;
+ 
+ }
 
 .footer__logo-container1 p{
     display: inline;
     margin-left: -8px;
+    
 }
 .footer__logo-container2{
     margin-left: 17px;
@@ -792,7 +817,10 @@ footer{
     color: #A5A5A5;
 }
 
-
+.footer__logo-container2 p{
+    margin-left: 9px;
+    margin-top: 0;
+}
 
 /*-------------------------------------------------*/
 @media only screen and (min-width:1000px){
@@ -814,10 +842,15 @@ footer{
     justify-content: space-evenly;
     
 }
+.grid{
+    padding-bottom: 50px;
+
+}
 
 /*COLOCAR GRID*/
 .grid__containers{
     width: 850px;
+    height: 330px;
     display: flex;
     
 }
@@ -830,46 +863,87 @@ footer{
     flex-basis: 140%;
 }
 
+.grid__containers-card1-tit{
+    padding-top: 30px;
+}
+.grid__containers-card1-line{
+    padding-top: 20px;
+}
+.grid__containers-card1-line hr{
+    background-color: #FB3B64;
+    display: block;
+    height: 4px;
+
+}
+
 
 .grid__containers-card2-div{
     flex-basis: 140%;
 }
-    
+.grid__containers-card2-tit{
+    padding-top: 20px;
+}
+.grid__containers-card2-line{
+    padding-top: 20px;
+}
+
+.grid__containers-card2-line hr{
+    background-color: #08A6E4;
+    display: block;
+    height: 4px;
+
+}
 
 .grid__containers-card1-div-img{
     margin-top: 65px;
     margin-right: 10px;
-    height: 219px;
-    width: 386.44px;
+    height: 180px;
+    width: auto;
 
 }
 .grid__containers-card1-div-circle{
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     top: 38px;
-    left: 31px;
+    left: 110px;
 
 }
 
 
 .grid__containers-card2-div-circle{
-
-    width: 320px;
-    height: 320px;
-    top:12px;
-    left: 1px;
+    width: 280px;
+    height: 280px;
+    bottom: 10px;
+    left: 25px;
 }
 .grid__containers-card2-div-img{
-    height: 328px;
-    width: 426px;
-    top:28px;
-
+    height: 280px;
+    width: auto;
+    right: 10px;
+    top: 10px;
 }
 
 #card-3{
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
+    height: 320px;
+}
+.grid__containers-card3-tit{
+    padding-top: 30px;
+    padding-right: 150px;
+}
+
+.grid__containers-card3-line{
+    margin-top: 20px;
+}
+.grid__containers-card3-text{
+    padding-right: 60px;
+}
+.grid__containers-card3-line hr{
+    display: block;
+    background-color:#55DFB4;
+    height: 4px;
 }
 
 .mov{
@@ -878,15 +952,18 @@ footer{
 }
 
 #card-4{
-    height: 370px;
+    height: 320px;
     margin-left: 20px;
     flex-basis: 60%;
 }
 .grid__containers-img{
-    top: 75px;
-    left: 55px;
+    top: 88px;
+    left: 62px;
+    width: 235px;
 }
-
+.grid__containers-card3-line hr{
+    width: 60%;
+}
 .last__prices{
     flex-direction: row;
     justify-content: space-around;
@@ -919,17 +996,89 @@ footer{
     justify-content: center;
     align-items: unset;
 }
+.last__pregform-form{
+    width: 440px;
+}
+.last__pregform-preg{
+    margin-right: 80px;
+}
+.last__pregform-preg-text h2{
+    margin-top: 0;
+}
+.last__pregform-form-formu-aceptar input{
+    top: 326px;
+    left: 220px;
+}
 .last__pregform-form-formu-aceptar input:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
     cursor: pointer;
+   
 }
 
 /*NAVEGADOR*/
+
+
+
 .list{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
+.list__item{
+    margin-right: 60px;
+}
+
+
+/*TARJETAS DE PRICING*/
+.last__prices{
+    justify-content: center;
+}
+.last__prices-basic, .last__prices-profe, 
+.last__prices-premium{
+    transition: width linear;
+}
+
+/*efecto de ampliar cajas*/
+.last__prices-profe:hover, 
+.last__prices-premium:hover{
+    width: 378px;
+}
+.last__prices-basic:hover{
+    width: 378px;
+}
+
+
+.last__prices-profe{
+    margin-left:58px;
+    margin-right: 58px;
+}
+.last__prices-basic, .last__prices-profe, .last__prices-premium{
+    width: 372px;
+    height: 461px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.last__prices-profe-right,
+.last__prices-premium-right{
+    margin-top: 10px;
+}
+.last__prices-basic-button, .last__prices-profe-button,
+.last__prices-premium-button{
+    margin-top: 435px;
+    margin-left: auto;
+}
+
+.footer__imgs :first-child{
+    margin-right: 20px;
+    
+}
+.footer__logo-container2 p{
+    padding-left: 61px;
+}
+#logo2{
+    margin-left: 86px;
+}
 
 
 }
