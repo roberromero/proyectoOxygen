@@ -7,13 +7,14 @@
     --fuente-principal: 'Raleway', sans-serif;
     --fuente-secundaria: 'Open Sans', sans-serif;
     font-family: var(--fuente-principal);
+    font-weight: 400;
 }
 
 body{
 
 min-width: 320px;/*---*/
 font-size: 16px;
-font-weight: 400;
+
 }
 
 img {
@@ -33,9 +34,8 @@ header{
 #logo{
    color: #08A6E4;
    font-size: 32px;
-   font-weight: bolder;
    margin-left: 25px;
-
+   font-weight: 300;
 }
 .dropdownbutton{
     border: none;
@@ -94,7 +94,6 @@ nav{
     font-size: 35px;
     margin-bottom: 0px;
     line-height: 41px;
-    font-weight: bold;
 }
 .main__text p{
     font-family: var(--fuente-secundaria);
@@ -103,7 +102,6 @@ nav{
     text-align: center;
     padding: 5px 34px 20px 34px;
     max-width: 300px;
-    font-weight: 600;
 }
 
 .main__text button{
@@ -118,6 +116,9 @@ nav{
     color:#FFFFFF;
     border: #08A6E4;
     align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
     }
 .main__img{
     width:100%;
@@ -129,16 +130,20 @@ nav{
 
 
 .main__publi{
-font-size: 30px;
-line-height: 45px;
+
 text-align: center;
 margin-bottom: 25px;
 margin-left: 20px;
+
 }
 
 .main__publi h3{
     padding-right: 20px;
-    margin: 10px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    width: 300px;
 }
     /*ICONOS*/
 .main__ico-text, .main__ico2-text,
@@ -187,7 +192,9 @@ margin-left: 20px;
 
 .main__ico-text{
     font-size: 17px;
-    font-family: var(--fuente-secundaria);
+    line-height: 20px;
+    font-family: var(--fuente-principal);
+    color: #A5A5A5;
 }
 
 
@@ -231,7 +238,9 @@ margin-left: 20px;
 
 .main__ico2-text{
     font-size: 17px;
-    font-family: var(--fuente-secundaria);
+    font-family: var(--fuente-principal);
+    line-height: 20px;
+    color: #A5A5A5;
 }
 
 /*--ICO3--*/
@@ -273,7 +282,9 @@ margin-left: 20px;
 
 .main__ico3-text{
     font-size: 17px;
-    font-family: var(--fuente-secundaria);
+    font-family: var(--fuente-principal);
+    line-height: 20px;
+    color: #A5A5A5;
 }
 
 
@@ -353,7 +364,6 @@ hr{
 .grid__containers-card1-text{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    font-weight: 600;
     line-height: 21px;
 
 }
@@ -390,7 +400,6 @@ hr{
 .grid__containers-card2-text{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    font-weight: 600;
     line-height: 21px;
 }
 
@@ -407,7 +416,6 @@ hr{
 .grid__containers-card3-text{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    font-weight: 600;
     line-height: 21px;
 
 }
@@ -492,6 +500,9 @@ hr{
 .last__prices-basic-left-op{
     font-size: 20px;
     margin-top: 70px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #13253B;
 }
 .last__prices-basic-left-pr{
     font-family: var(--fuente-secundaria);
@@ -522,6 +533,7 @@ hr{
 .last__prices-basic-right-container p{
     font-size: 14px;
     font-family: var(--fuente-secundaria);
+    
 }
 
 .last__prices-basic-button{
@@ -559,6 +571,9 @@ hr{
 .last__prices-profe-left-op{
     font-size: 20px;
     margin-top: 70px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #13253B;
 }
 .last__prices-profe-left-pr{
     font-family: var(--fuente-secundaria);
@@ -569,8 +584,9 @@ hr{
 .last__prices-profe-left-of{
     margin-top: -39px;
     font-size: 14px;
-    font-weight: bolder;
-
+    line-height: 14px;
+    font-weight: 700;
+    color: #13253B;
 }
 
 
@@ -637,17 +653,23 @@ hr{
 .last__prices-premium-left-op{
     font-size: 20px;
     margin-top: 70px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #13253B;
 }
 .last__prices-premium-left-pr{
     font-family: var(--fuente-secundaria);
     font-size: 46px;
     color: #55DFB4;
     margin-top: -22px;
+    
 }
 .last__prices-premium-left-of{
     margin-top: -39px;
     font-size: 14px;
-    font-weight: bolder;
+    line-height: 14px;
+    font-weight: 700;
+    color: #13253B;
 }
 
 
@@ -716,8 +738,7 @@ hr{
 }
 .last__pregform-preg-text h2{
     font-size: 40px;
-    line-height: 46.96px;
-    padding-bottom: ;
+    line-height: 47px;
    
 }
 
@@ -737,14 +758,14 @@ hr{
 .last__pregform-preg-info-container2 a{
     color: #A5A5A5;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .last__pregform-preg-info-container1 a{
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     color: #A5A5A5;
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 600;
 
 }
 
@@ -775,7 +796,7 @@ hr{
 
 .last__pregform-form-formu input{
     border: none;
-    border-bottom: 1px solid rgb(128, 128, 128);
+    border-bottom: 1px solid #95989A;
 }
 
 .last__pregform-form-formu-aceptar{
@@ -785,13 +806,14 @@ hr{
     margin-left: 20px;
     font-size: 12px;
     font-family: var(--fuente-secundaria);
+    color: #707070;
 }
 .last__pregform-form-formu-aceptar-checkbox{
     position: absolute;
 }
 
 .last__pregform-form-formu-aceptar input{
-    top: 356px;
+    top: 366px;
     left: 87px;
     width: 226px;
     height: 57px;
@@ -809,7 +831,7 @@ hr{
 footer{
     background-color: #F7F7F7;
     width: 100%;
-    height: 70px;
+    height: 89px;
     border-bottom:rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content:space-between;
@@ -828,9 +850,13 @@ footer{
 #logo2{
     color: #08A6E4;
     font-size: 26px;
-    font-weight: bolder;
+    font-weight: 300;
     margin-left: 25px;
+    line-height: 30px;
  
+ }
+ .footer__logo{
+
  }
 
 .footer__logo-container1 p{
@@ -848,6 +874,7 @@ footer{
 .footer__logo-container2 p{
     margin-left: 9px;
     margin-top: 0;
+    line-height: 15px;
 }
 
 /*-------------------------------------------------*/
