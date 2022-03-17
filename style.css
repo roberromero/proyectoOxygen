@@ -547,6 +547,10 @@ hr{
     font-family: var(--fuente-secundaria);
     color:#FFFFFF;
     border: #EB476E;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.7px;
+
 
 }
 
@@ -624,7 +628,9 @@ hr{
     font-family: var(--fuente-secundaria);
     color:#FFFFFF;
     border: #07ACE6;
-
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.7px;
 }
 
 
@@ -706,7 +712,9 @@ hr{
     font-family: var(--fuente-secundaria);
     color:#FFFFFF;
     border: #55DFB4;
-
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.7px;
 }
 
 
@@ -790,6 +798,7 @@ hr{
         display: flex;
         flex-direction: column;
         padding-bottom: 30px;
+        
 
 
 }   
@@ -824,6 +833,9 @@ hr{
     color:#FFFFFF;
     border: #08A6E4;
     position: absolute;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.7px;
 }
 
 /*FOOTER*/
@@ -874,6 +886,7 @@ footer{
 .footer__logo-container2 p{
     margin-left: 9px;
     margin-top: 0;
+    margin-bottom: 0;
     line-height: 15px;
 }
 
@@ -897,13 +910,28 @@ footer{
     height: 594px;
 }
 .main__publi{
+    padding-top: 40px auto;
+
+}
+.main__publi h3{
     font-size: 36px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.main__ico2{
+    margin: 0 190px;
+}
+.main__ico3{
+    margin: 0;
 }
 
 /*ICONOS DEBAJO DE LA IMAGEN*/
 .colocar_iconos{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
     
 }
 .grid{
@@ -913,11 +941,12 @@ footer{
 
 /*COLOCAR GRID*/
 .grid__containers{
-    width: 850px;
-    height: 330px;
+    width: 1124px;
+    height: 370px;
     display: flex;
     
 }
+
 
 .grid__containers-card1{
     flex-direction: row-reverse;
@@ -991,7 +1020,7 @@ footer{
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
-    height: 320px;
+    
 }
 .grid__containers-card3-tit{
     padding-top: 30px;
@@ -1012,13 +1041,16 @@ footer{
 
 .mov{
     display: flex;
-    max-width: 850px;
+    width: 1124px;
+
 }
 
 #card-4{
-    height: 320px;
-    margin-left: 20px;
+    height: 370px;
+    margin-left: 30px;
     flex-basis: 60%;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 .grid__containers-img{
     top: 88px;
