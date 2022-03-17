@@ -134,7 +134,13 @@ margin-left: 20px;
 
 
     /*ICONOS*/
+.main__ico-text, .main__ico2-text,
+.main__ico3-text{
+    height: 48px;
+    width: 126px;
+    text-align: center;
 
+}
 /*--ICO1-*/
 
 .main__ico{
