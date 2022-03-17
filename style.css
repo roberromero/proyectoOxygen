@@ -65,9 +65,11 @@ nav{
 .list__item a{
     text-transform: uppercase;
     font-size: 11px;
+    font-weight: 700;
     font-family: var(--fuente-secundaria);
-    color: #000000;
+    color: #A5A5A5;
     font-style: bold;
+    letter-spacing: 1px;
 }
 
 /*MAIN*/
@@ -829,12 +831,21 @@ footer{
 
         display: none;
     }
+    #logo{
+        margin-left: 136px;
+    }
 
      .list{
          display: flex;
      }
     
-    
+    /*---Ajustar imagen--*/
+.main__img{
+    height: 594px;
+}
+.main__publi{
+    font-size: 36px;
+}
 
 /*ICONOS DEBAJO DE LA IMAGEN*/
 .colocar_iconos{
@@ -974,7 +985,13 @@ footer{
 .list__item:hover{
     border-bottom: 4px solid #08A6E4;
     padding: 27px;
+ }/*-------------------*/
+ .list__item a:hover{
+    color: #000000;
+    font-weight: bolder;
+    font-weight: 900;
  }
+ 
 
 .main__text button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
