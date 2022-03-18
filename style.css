@@ -340,6 +340,8 @@ hr{
 .grid__containers-card1-div-img{
     position: relative;
     padding-top: 5px;
+    width: 192.76px;
+    height: 109.93px;
 }
 
 .grid__containers-card1-div-circle{
@@ -350,7 +352,7 @@ hr{
     border-radius: 41px;
     margin-left: 120px;
     position: absolute;
-    left: 25px;
+    left: 23px;
     bottom: 33px;
     transform: rotate(45deg);
     padding-top: 42px;
@@ -365,7 +367,7 @@ hr{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
     line-height: 21px;
-
+    padding-top: 20px;
 }
 
 /*CARD 2*/
@@ -378,14 +380,15 @@ hr{
 
 .grid__containers-card2-div-img{
     position: relative;
-    padding-top: 5px;
+    width: 175px;
+    height: 134.99px;
 }
 
 .grid__containers-card2-div-circle{
     background-color: #08A6E4;
     position: absolute;
-    height: 132px;
-    width: 132px;
+    height: 131px;
+    width: 131px;
     border-radius: 50%;
     left: 45px;
     bottom: 19px;
@@ -917,7 +920,8 @@ footer{
     font-size: 36px;
     width: 100%;
     margin: 0 auto;
-    
+    line-height: 42px;
+    font-weight: 400;
 }
 .main__ico2{
     margin: 0 190px;
@@ -925,6 +929,8 @@ footer{
 .main__ico3{
     margin: 0;
 }
+
+
 
 /*ICONOS DEBAJO DE LA IMAGEN*/
 .colocar_iconos{
@@ -958,6 +964,13 @@ footer{
 
 .grid__containers-card1-tit{
     padding-top: 30px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
+.grid__containers-card1-text{
+    font-weight: 400;
+    font-size: 16px;
 }
 .grid__containers-card1-line{
     padding-top: 20px;
@@ -965,7 +978,8 @@ footer{
 .grid__containers-card1-line hr{
     background-color: #FB3B64;
     display: block;
-    height: 4px;
+    width: 327px;
+    height: 2px;
 
 }
 
@@ -975,6 +989,13 @@ footer{
 }
 .grid__containers-card2-tit{
     padding-top: 20px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+}
+.grid__containers-card2-text{
+    font-weight: 400;
+    font-size: 16px;
 }
 .grid__containers-card2-line{
     padding-top: 20px;
@@ -983,37 +1004,39 @@ footer{
 .grid__containers-card2-line hr{
     background-color: #08A6E4;
     display: block;
-    height: 4px;
+    width: 327px;
+    height: 2px;
 
 }
 
 .grid__containers-card1-div-img{
     margin-top: 65px;
     margin-right: 10px;
-    height: 180px;
+    height: 219px;
+    width: 386px;
     width: auto;
 
 }
 .grid__containers-card1-div-circle{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     top: 38px;
-    left: 110px;
+    left: 210px;
 
 }
 
 
 .grid__containers-card2-div-circle{
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
     bottom: 10px;
     left: 25px;
 }
 .grid__containers-card2-div-img{
-    height: 280px;
-    width: auto;
-    right: 10px;
-    top: 10px;
+    height: 328px;
+    width: 426px;
+    top: 20px;
+    right: 70px;
 }
 
 #card-3{
@@ -1025,18 +1048,27 @@ footer{
 .grid__containers-card3-tit{
     padding-top: 30px;
     padding-right: 150px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    width: 550px;
 }
 
 .grid__containers-card3-line{
     margin-top: 20px;
+   
 }
 .grid__containers-card3-text{
     padding-right: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 500px;
 }
 .grid__containers-card3-line hr{
     display: block;
     background-color:#55DFB4;
-    height: 4px;
+    width: 327px;
+    height: 2px;
 }
 
 .mov{
@@ -1054,16 +1086,28 @@ footer{
 }
 .grid__containers-img{
     top: 88px;
-    left: 62px;
-    width: 235px;
+    width: 265.73px;
+    height: 207.72px;
+    left: 80px;
 }
-.grid__containers-card3-line hr{
-    width: 60%;
-}
+
 .last__prices{
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 60px;
+}
+.last__prices-basic-left-op, .last__prices-profe-left-op,
+.last__prices-premium-left-op{
+    margin-top: 30px;
+}
+.last__prices-basic-left-pr, .last__prices-profe-left-pr,
+.last__prices-premium-left-pr{
+    margin-top: 5px;
+    font-weight: 300;
+}
+.last__prices-profe-left-of,
+.last__prices-premium-left-of{
+    font-size: 12px;
 }
 
 /*SOMBREADOS*/
@@ -1102,10 +1146,12 @@ footer{
     width: 440px;
 }
 .last__pregform-preg{
-    margin-right: 80px;
+    padding-right: 100px;
+    width: auto;
 }
 .last__pregform-preg-text h2{
     margin-top: 0;
+    font-size: 49px;
 }
 .last__pregform-form-formu-aceptar input{
     top: 326px;
