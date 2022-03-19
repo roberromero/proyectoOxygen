@@ -917,7 +917,14 @@ footer{
 
 .list{
     display: flex;
+    justify-content: flex-end;
 }
+
+.list__item{
+    margin-right: 60px;
+    padding: 0;
+}
+
      /*SOMBREADOS*/
 .list__item:hover{
     border-bottom: 4px solid #08A6E4;
@@ -956,8 +963,11 @@ footer{
 .main__ico3{
     margin: 0;
 }
-
-
+/*Shadow cuando pasamos el ratón sobre el botón*/
+.main__text button:hover{
+    box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
+    cursor: pointer;
+}
 
 /*ICONOS DEBAJO DE LA IMAGEN*/
 .colocar_iconos{
@@ -1138,16 +1148,11 @@ footer{
 }
 
 
-
-.main__text button:hover{
-    box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
-    cursor: pointer;
-}
-
 .last__prices-basic:hover, .last__prices-profe:hover, 
 .last__prices-premium:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
 }
+
 .last__prices-basic-button:hover, .last__prices-profe-button:hover,
 .last__prices-premium-button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
@@ -1194,20 +1199,6 @@ footer{
 }
 
 
-
-/*NAVEGADOR*/
-
-
-
-.list{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.list__item{
-    margin-right: 60px;
-    padding: 0;
-}
 
 
 /*TARJETAS DE PRICING*/
