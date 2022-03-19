@@ -58,9 +58,9 @@ nav{
 }
 
 .list__item{
-    border-bottom: 4px solid transparent;
-    padding: 27px;
+    border-bottom: 4px solid rgb(255, 255, 255);
     cursor: pointer;
+    
 }
 
 .list__item a{
@@ -71,6 +71,8 @@ nav{
     color: #A5A5A5;
     font-style: bold;
     letter-spacing: 1px;
+    display: block;
+    padding: 27px;
 }
 
 /*MAIN*/
@@ -905,17 +907,27 @@ footer{
 /*-------------------------------------------------*/
 @media only screen and (min-width:1000px){
 
-    .dropdownbutton{
+.dropdownbutton{
 
-        display: none;
-    }
-    #logo{
-        margin-left: 136px;
-    }
+    display: none;
+}
+#logo{
+    margin-left: 136px;
+}
 
-     .list{
-         display: flex;
-     }
+.list{
+    display: flex;
+}
+     /*SOMBREADOS*/
+.list__item:hover{
+    border-bottom: 4px solid #08A6E4;
+ }/*-------------------*/
+ .list__item a:hover{
+    color: #000000;
+    font-weight: bolder;
+    font-weight: 900;
+ }
+ 
     
     /*---Ajustar imagen--*/
 .main__text h2{
@@ -1125,17 +1137,7 @@ footer{
     font-size: 12px;
 }
 
-/*SOMBREADOS*/
-.list__item:hover{
-    border-bottom: 4px solid #08A6E4;
-    padding: 27px;
- }/*-------------------*/
- .list__item a:hover{
-    color: #000000;
-    font-weight: bolder;
-    font-weight: 900;
- }
- 
+
 
 .main__text button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
@@ -1204,6 +1206,7 @@ footer{
 
 .list__item{
     margin-right: 60px;
+    padding: 0;
 }
 
 
