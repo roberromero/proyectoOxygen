@@ -473,13 +473,7 @@ hr{
     margin-top: -19px;
 }
 
-/*para colo cada tarjeta*/
-.last__prices-containers{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
+
 
 .last__prices-containers > *{
     margin-bottom: 54px;
@@ -514,31 +508,32 @@ hr{
     font-family: var(--fuente-secundaria);
     font-size: 46px;
     color: #FB3B64;
-    margin-top: -22px;
+    margin-top: -18px;
+    font-weight: 300;
 }
 
 
 .last__prices-basic-right{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    
+    padding-top: 20px;
+
 }
 
 
-.last__prices-basic-right-container{
-    display: flex;
-}
 .last__prices-basic-right-container :last-child{
-    margin-top: 15px;
+    margin-top: 9px;
 }
-.last__prices-basic-right-container img{
-    padding: 8px;
-}
+
 .last__prices-basic-right-container p{
     font-size: 14px;
     font-family: var(--fuente-secundaria);
+    display: inline-block;
+
+    
+}
+.last__prices-basic-right-container img{
+    display: inline-block;
     
 }
 
@@ -589,11 +584,12 @@ hr{
     font-family: var(--fuente-secundaria);
     font-size: 46px;
     color: #07ACE6;
-    margin-top: -22px;
+    margin-top: -10px;
+    font-weight: 300;
 }
 .last__prices-profe-left-of{
     margin-top: -39px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14px;
     font-weight: 700;
     color: #13253B;
@@ -603,24 +599,21 @@ hr{
 .last__prices-profe-right{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    
+    margin-top: 23px;
 }
 
 
-.last__prices-profe-right-container{
-    display: flex;
-}
+
 .last__prices-profe-right-container :last-child{
-    margin-top: 15px;
+    margin-top: 9px;
 }
 .last__prices-profe-right-container img{
-    padding: 8px;
+    display: inline-block;
 }
 .last__prices-profe-right-container p{
     font-size: 14px;
     font-family: var(--fuente-secundaria);
+    display: inline-block;
 }
 
 .last__prices-profe-button{
@@ -673,12 +666,13 @@ hr{
     font-family: var(--fuente-secundaria);
     font-size: 46px;
     color: #55DFB4;
-    margin-top: -22px;
+    margin-top: -15px;
+    font-weight: 300;
     
 }
 .last__prices-premium-left-of{
     margin-top: -39px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 14px;
     font-weight: 700;
     color: #13253B;
@@ -688,23 +682,19 @@ hr{
 .last__prices-premium-right{
     font-family: var(--fuente-secundaria);
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.last__prices-premium-right-container{
-    display: flex;
+    margin-top: 23px;
 }
 .last__prices-premium-right-container :last-child{
-    margin-top: 15px;
+    margin-top: 9px;
 }
+
 .last__prices-premium-right-container img{
-    padding: 8px;
+    display: inline-block;
 }
 .last__prices-premium-right-container p{
     font-size: 14px;
     font-family: var(--fuente-secundaria);
+    display: inline-block;
 }
 
 .last__prices-premium-button{
@@ -1135,6 +1125,15 @@ footer{
     justify-content: space-around;
     margin-bottom: 60px;
 }
+
+
+.last__prices-basic-right, .last__prices-profe-right,
+.last__prices-premium-right{
+    text-align: center;
+}
+
+
+
 .last__prices-basic-left-op, .last__prices-profe-left-op,
 .last__prices-premium-left-op{
     margin-top: 30px;
