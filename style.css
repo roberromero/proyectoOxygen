@@ -1148,6 +1148,14 @@ footer{
     font-size: 12px;
 }
 
+.last__prices-containers{
+    width: 405px;
+    height: 500px
+}
+.last__prices-basic, .last__prices-profe,
+.last__prices-premium{
+    margin: 0 auto;
+}
 
 .last__prices-basic:hover, .last__prices-profe:hover, 
 .last__prices-premium:hover{
@@ -1214,17 +1222,15 @@ footer{
 /*efecto de ampliar cajas*/
 .last__prices-profe:hover, 
 .last__prices-premium:hover{
-    width: 378px;
+    width: 405px;
+    height: 500px
 }
 .last__prices-basic:hover{
-    width: 378px;
+    width: 405px;
+    height: 500px
 }
 
 
-.last__prices-profe{
-    margin-left:58px;
-    margin-right: 58px;
-}
 .last__prices-basic, .last__prices-profe, .last__prices-premium{
     width: 372px;
     height: 461px;
