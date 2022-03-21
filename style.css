@@ -1016,8 +1016,8 @@ footer{
     background-color: #FB3B64;
     display: block;
     width: 327px;
-    height: 2px;
-
+    height: 4px;
+    border: none;
 }
 
 
@@ -1042,8 +1042,8 @@ footer{
     background-color: #08A6E4;
     display: block;
     width: 327px;
-    height: 2px;
-
+    height: 4px;
+    border: none;
 }
 
 .grid__containers-card1-div-img{
@@ -1105,7 +1105,8 @@ footer{
     display: block;
     background-color:#55DFB4;
     width: 327px;
-    height: 2px;
+    height: 4px;
+    border: none;
 }
 
 .mov{
