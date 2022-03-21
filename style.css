@@ -1125,7 +1125,7 @@ footer{
 
 .last__prices{
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
@@ -1151,14 +1151,8 @@ footer{
     font-size: 12px;
 }
 
-.last__prices-containers{
-    width: 405px;
-    height: 500px
-}
-.last__prices-basic, .last__prices-profe,
-.last__prices-premium{
-    margin: 0 auto;
-}
+
+
 
 .last__prices-basic:hover, .last__prices-profe:hover, 
 .last__prices-premium:hover{
@@ -1169,8 +1163,11 @@ footer{
 .last__prices-premium-button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
     cursor: pointer;
+    /*---------------*/
 }
-
+.last__prices-containers{
+    padding-right: 50px;
+}
 .last__pregform{
     flex-direction: row;
     justify-content: center;
@@ -1188,9 +1185,7 @@ footer{
     margin-top: 0;
     font-size: 49px;
 }
-.last__pregform-preg-text p{
-    margin-top: -5px;
-}
+
 .last__pregform-form-formu-aceptar{
     font-family: 'Open Sans';
     font-size: 12px;
@@ -1212,26 +1207,13 @@ footer{
 }
 
 
-
-
-/*TARJETAS DE PRICING*/
-.last__prices{
-    justify-content: center;
-}
-.last__prices-basic, .last__prices-profe, 
-.last__prices-premium{
-    transition: width linear;
-}
-
 /*efecto de ampliar cajas*/
 .last__prices-profe:hover, 
 .last__prices-premium:hover{
-    width: 405px;
-    height: 500px
+    transform: scale(1.12);
 }
 .last__prices-basic:hover{
-    width: 405px;
-    height: 500px
+    transform: scale(1.12);
 }
 
 
