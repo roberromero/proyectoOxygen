@@ -36,6 +36,7 @@ header{
    font-size: 32px;
    margin-left: 25px;
    font-weight: 300;
+   position:absolute;
 }
 .dropdownbutton{
     border: none;
