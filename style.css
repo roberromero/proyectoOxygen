@@ -1163,7 +1163,6 @@ footer{
 .last__prices-premium-button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
     cursor: pointer;
-    /*---------------*/
 }
 .last__prices-containers{
     padding-right: 50px;
@@ -1226,7 +1225,8 @@ footer{
 }
 .last__prices-profe-right,
 .last__prices-premium-right{
-    margin-top: 10px;
+    margin-top: 38px;
+
 }
 .last__prices-basic-button, .last__prices-profe-button,
 .last__prices-premium-button{
