@@ -71,7 +71,7 @@ nav{
     font-family: var(--fuente-secundaria);
     color: #A5A5A5;
     font-style: bold;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     display: block;
     padding: 27px;
 }
@@ -1119,6 +1119,9 @@ footer{
     height: 207.72px;
     left: 80px;
 }
+.last__pricing{
+    padding-bottom: 40px;
+}
 
 .last__prices{
     flex-direction: row;
@@ -1172,6 +1175,7 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: unset;
+    margin-top: 120px;
 }
 .last__pregform-form{
     width: 440px;
