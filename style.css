@@ -984,6 +984,29 @@ header{
     
  }
  
+
+ /*-----BOTÓN FLOTANTE-------*/
+
+ #returnTop{
+        position: fixed;
+        display: block;
+        left: 92%;
+        top: 90%;
+        z-index: 1;
+        cursor: pointer;
+        border: transparent;
+        border-radius: 30%;
+        background-image: none;
+        background-color: transparent;
+ }
+ #returnTop__im{
+    padding: 4px;
+ }
+ 
+ #returnTop:hover{
+    background-color: #b2d3df;
+ }
+ 
     
     /*---Ajustar imagen--*/
 .main__text h2{

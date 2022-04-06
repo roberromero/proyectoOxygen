@@ -44,3 +44,19 @@ let progressbar = document.getElementById('progressbar__inner');
         progressbar.style.width= `${percent}%`;
     })
 });
+
+
+//RETURNTOP BUTTON
+
+let returnTop = document.getElementById('returnTop');
+
+const returnTopFun = () => {
+    window.scroll({
+        top: 0,
+        left: 100,
+        behavior: 'smooth'
+      });
+}
+    
+
+returnTop.addEventListener('click', returnTopFun);
