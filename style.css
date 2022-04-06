@@ -825,10 +825,18 @@ hr{
 
 }   
 
-.last__pregform-form-formu input{
+#fname,#correo, #aceptar{
     border: none;
     border-bottom: 1px solid #95989A;
+    outline: none;
+    
 }
+
+/* .last__pregform-form-formu input:hover{
+    Preguntar a John
+    outline: 2px ridge rgba(8, 166, 228, .6);
+    border-radius: 2rem;
+} */
 
 .last__pregform-form-formu-aceptar{
     display: flex;
@@ -841,8 +849,11 @@ hr{
 }
 .last__pregform-form-formu-aceptar-checkbox{
     position: absolute;
+    
 }
-
+.last__pregform-form-formu-aceptar-checkbox > input{
+outline: #000000;    
+}
 .last__pregform-form-formu-aceptar input{
     top: 366px;
     left: 87px;
@@ -996,7 +1007,7 @@ header{
  #returnTop{
         position: fixed;
         display: block;
-        left: 95%;
+        left: 92%;
         top: 83%;
         z-index: 1;
         cursor: pointer;

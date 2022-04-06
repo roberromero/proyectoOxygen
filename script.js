@@ -67,3 +67,7 @@ const delayTop = () => {
 returnTop.addEventListener('click', delayTop);
 
 
+//VALIDACIÓN DEL FORMULARIO
+
+//expresión regular para el nombre -> ^[a-zA-Z]{2,200}$
+//expresión regular para el correo -> /(\w+)\@(\w+)\.(\w+)$/gi
