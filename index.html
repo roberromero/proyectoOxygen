@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="normalize.css">
     <!--Links from GOOGLE-FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   
 </head>
 <body>
     <header>
         <p id="logo">OXYGEN Shop</p>
         <nav class="nav">
-            <ul class="list">
+            <ul class="list" id="list">
                     <li class="list__item">
                             <a href="#whyus">why us</a>
                     </li>
@@ -29,9 +30,11 @@
                     </li>
             </ul>
         </nav>
-        <button class="dropdownbutton">
-            <img class="dropdownbutton__bar" src="./img/menu.svg" alt="botón para el desplegable">
+        <button class="dropdownbutton" id="boton">
+            <img id="im" class="dropdownbutton__bar" src="./img/menu.svg" alt="botón para el desplegable">
+            <img id="imEquis" class="dropdownbutton__bar" src="./img/x-menu.svg" alt="botón para el desplegable">
         </button>
+        
     </header>
         <!--PRIMERA SECCIÓN "NAV"-->
     
@@ -397,6 +400,7 @@
     </div>
     
 </footer>
-
+ <!--archivo js-->
+ <script src="script.js"></script>
 </body>
 </html>
