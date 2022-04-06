@@ -921,15 +921,22 @@ footer{
 header{
 
     display: block;
-
+    box-shadow: 0px 3px 6px #00000010;
 }
 
 #progressbar{
-    position: sticky;
     width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+#progressbar__inner{
+    position: relative;
+    width: 0%;
     height: 3px;
-    background-color: #000000;
-    border: 2px solid;
+    padding: 0;
+     /*He utilizado la página https://cssgradient.io/ para crear un gradiante de los tres colores de la página*/
+     background: linear-gradient(90deg, rgba(85,223,180,1) 0%, rgba(7,172,230,1) 36%, rgba(235,71,110,1) 100%);
 }
 
 
