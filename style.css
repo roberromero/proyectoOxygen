@@ -97,6 +97,10 @@ nav{
     padding-bottom: 29px;
 }
 
+
+#returnTop{
+    display: none;
+}
 /*MAIN*/
 
 .main{
@@ -966,6 +970,12 @@ header{
     margin-right: 60px;
 
 }
+
+.list__item a{
+    font-weight: 900;
+    font-weight: bolder;
+
+}
 .list__item:first-child{
     margin-top: 0px;
 }
@@ -977,11 +987,7 @@ header{
     border-bottom: 4px solid #08A6E4;
  }/*-------------------*/
  .list__item a:hover{
-
     color: #000000;
-    font-weight: bolder;
-    font-weight: 900;
-    
  }
  
 
@@ -990,8 +996,8 @@ header{
  #returnTop{
         position: fixed;
         display: block;
-        left: 92%;
-        top: 90%;
+        left: 95%;
+        top: 83%;
         z-index: 1;
         cursor: pointer;
         border: transparent;
@@ -1233,11 +1239,11 @@ header{
 }
 
 
-
-
 .last__prices-basic:hover, .last__prices-profe:hover, 
 .last__prices-premium:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
+    cursor: pointer;
+
 }
 
 .last__prices-basic-button:hover, .last__prices-profe-button:hover,
@@ -1291,10 +1297,11 @@ header{
 .last__prices-profe:hover, 
 .last__prices-premium:hover{
     transform: scale(1.12);
-    transition-duration: 1.5s;
+    transition-duration: 1.2s;
 }
 .last__prices-basic:hover{
     transform: scale(1.12);
+    transition-duration: 1.2s;
 }
 
 

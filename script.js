@@ -50,13 +50,20 @@ let progressbar = document.getElementById('progressbar__inner');
 
 let returnTop = document.getElementById('returnTop');
 
+//Toma el objeto "window" y escrolea hasta la posición indicada
 const returnTopFun = () => {
     window.scroll({
         top: 0,
         left: 100,
-        behavior: 'smooth'
+        behavior: 'smooth'//NO PARECE QUE HAGA EFECTO ¿Por qué?
       });
 }
-    
+//Recibe a la función anterior y la ralentiza 200 milisegs.
+const delayTop = () => {
+    window.setTimeout(returnTopFun, 200);
+}
 
-returnTop.addEventListener('click', returnTopFun);
+//Tras click al botón flecha llama a "delayTop"
+returnTop.addEventListener('click', delayTop);
+
+
