@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
 //MENú DESPLEGABLE
 
 //Declaro las variables
@@ -35,9 +34,13 @@ menuEquis.addEventListener('click', closeMenu);
 
 let progressbar = document.getElementById('progressbar__inner');
 
-    window.addEventListener('scroll', function () {
-        let h = document.documentElement;
-        let st = h.scrollTop || document.body.scrollTop;
+    window.addEventListener('scroll', () => {
+        //Obtenemos el objeto html (el objeto raíz)
+        let h = document.documentElement; 
+        
+        //Utilizo dos formas para obtener la altura en la que nos encontramos en cada momento
+        let st = h.scrollTop || document.body.scrollTop; 
+
         let sh = h.scrollHeight ||this.document.body.scrollHeight;
         let percent = st / (sh - h.clientHeight) * 100;
         console.log(percent);
@@ -68,6 +71,9 @@ returnTop.addEventListener('click', delayTop);
 
 
 //VALIDACIÓN DEL FORMULARIO
+
+
+
 
 //expresión regular para el nombre -> ^[a-zA-Z]{2,200}$
 //expresión regular para el correo -> /(\w+)\@(\w+)\.(\w+)$/gi

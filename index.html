@@ -352,17 +352,19 @@
 
                 <form class="last__pregform-form-formu" action="#">
 
+                    <!--INPUT MODIFICADO DESDE HTML Y CSS -->
                     <div class="last__pregform-form-formu-name">
                         <label class="n" for="fname">NAME</label><br><br>
-                        <input class="inp" type="text" id="fname" name="fname"><br>
+                        <input class="inp" type="text" id="fname" name="fname" minlength="2" 
+                        pattern="^\S+[a-zA-Z]$" maxlength="100" required><br>
                     </div>
 
                     <div class="last__pregform-form-formu-email">
                         <label class= "n" for="correo">EMAIL</label><br><br>
-                        <input class="inp" type="email" id="correo" name="correo">  
+                        <input class="inp" type="email" id="correo" name="correo" required>  
                     </div><br>
                     <div class="last__pregform-form-formu-aceptar-checkbox">
-                        <input type="checkbox" id="aceptar" name="aceptar">
+                        <input type="checkbox" id="aceptar" name="aceptar" required>
                      </div> 
 
                     <div class="last__pregform-form-formu-aceptar">
