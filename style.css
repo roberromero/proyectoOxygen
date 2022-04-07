@@ -822,23 +822,30 @@ hr{
         letter-spacing: 3.28px;
         
 }   
+/*Clases agregadas solo a CORREO(input) desde js atraves de classList.add()*/
+.correctValues{
+    border-bottom: 2px solid #55DFB4;
+}
+.incorrectValues{
+    border-bottom: 2px solid red;
+}
 
 #fname,#correo, #aceptar{
     border: none;
     border-bottom: 1px solid #95989A;
     outline: none;
-    
+    background-color: transparent;
 }
-#fname:hover{
+#fname:hover, #correo:hover{
     outline: 2px ridge rgba(15, 153, 208, 0.6);
     border-radius: 1px;
 }
-#fname:invalid:focus{
+/* #fname:invalid:focus{
     border-bottom: 2px solid red;
 }
 #fname:valid:focus{
     border-bottom: 2px solid #55DFB4;
-}
+} */
 
 .last__pregform-form-formu-aceptar{
     display: flex;
@@ -853,9 +860,9 @@ hr{
     position: absolute;
     
 }
-.last__pregform-form-formu-aceptar-checkbox > input{
-outline: #000000;    
-}
+
+
+/*--------------------------*/
 .last__pregform-form-formu-aceptar input{
     top: 366px;
     left: 87px;
@@ -872,9 +879,7 @@ outline: #000000;
     font-weight: 800;
     line-height: 17.7px;
 }
-.inp{ 
-    border-bottom:#95989A;
-}
+
 .n{
     font-weight: 600;
 }

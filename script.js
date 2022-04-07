@@ -72,8 +72,42 @@ returnTop.addEventListener('click', delayTop);
 
 //VALIDACIÓN DEL FORMULARIO
 
+//Utilizaremos el objeto "RegExp"
 
 
 
-//expresión regular para el nombre -> ^[a-zA-Z]{2,200}$
-//expresión regular para el correo -> /(\w+)\@(\w+)\.(\w+)$/gi
+//Se puede hacer de 2 formas:
+//- Instanciando el objeto
+let regularExp = new RegExp ("");
+//- Estática (no se puede modificar durante la ejecución):
+// let expRegular = /(\w+)\@(\w+)\.(\w+)$/gi;
+
+let correo = document.getElementById('correo');
+let nombre = document.getElementById('fname');
+
+function introduceD(event) {
+    let expRegularCorreo = /(\w+)\@(\w+)\.(\w+)$/gi;
+    let valueMail = event.target.value;
+
+    if(expRegularCorreo.test(valueMail)){
+        correo.style.borderBottom = "2px solid #55DFB4";
+    }
+    else{
+        correo.style.borderBottom = "2px solid red";
+    }
+}
+
+function introduceN(e) {
+    let expRegularNombre = /^\S+[a-zA-Z]$/;
+    let valueMail = e.target.value;
+    if (expRegularNombre.test(valueMail)) {
+        nombre.style.borderBottom = "2px solid #55DFB4";
+    }else{
+        nombre.style.borderBottom = "2px solid red";
+    }
+}
+correo.addEventListener('change', introduceD);
+nombre.addEventListener('change', introduceN);
+
+
+correo.addEventListener('keypress',introduceD());

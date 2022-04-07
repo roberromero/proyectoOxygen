@@ -355,13 +355,15 @@
                     <!--INPUT MODIFICADO DESDE HTML Y CSS -->
                     <div class="last__pregform-form-formu-name">
                         <label class="n" for="fname">NAME</label><br><br>
-                        <input class="inp" type="text" id="fname" name="fname" minlength="2" 
-                        pattern="^\S+[a-zA-Z]$" maxlength="100" required><br>
+                        <!-- Para comprobar un formulario desde html y css -->
+                        <!-- <input class="inp" type="text" id="fname" name="fname" minlength="2" 
+                        pattern="^\S+[a-zA-Z]$" maxlength="100" required><br> -->
+                        <input class="inp" type="text" id="fname" name="fname" required><br>
                     </div>
 
                     <div class="last__pregform-form-formu-email">
                         <label class= "n" for="correo">EMAIL</label><br><br>
-                        <input class="inp" type="email" id="correo" name="correo" required>  
+                        <input class="inp" class="correctValues" type="email" id="correo" name="correo" required>  
                     </div><br>
                     <div class="last__pregform-form-formu-aceptar-checkbox">
                         <input type="checkbox" id="aceptar" name="aceptar" required>
