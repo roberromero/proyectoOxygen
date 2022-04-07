@@ -824,13 +824,16 @@ hr{
 }   
 /*Clases agregadas solo a CORREO(input) desde js atraves de classList.add()*/
 .correctValues{
+    border: none;
     border-bottom: 2px solid #55DFB4;
+    
 }
 .incorrectValues{
+    border: none;
     border-bottom: 2px solid red;
 }
 
-#fname,#correo, #aceptar{
+.inp{
     border: none;
     border-bottom: 1px solid #95989A;
     outline: none;
@@ -937,6 +940,9 @@ footer{
     margin-bottom: 0;
     line-height: 15px;
 }
+
+
+
 
 /*-------------------------------------------------*/
 @media only screen and (min-width:1000px){
@@ -1355,6 +1361,6 @@ header{
     margin-left: 86px;
 }
 
-
 }
+
 

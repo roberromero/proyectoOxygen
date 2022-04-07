@@ -12,13 +12,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Función desplegar el menú
 const openMenu= () => {
-    lista.style.display= "flex";
-    menuBurger.style.display= "none";
-    menuEquis.style.display= "block";
+    
 }
 
 //Función plegar el menú
-const closeMenu = () => {
+const closeMenu = () => {//DUDA PARA JOHN (COMO HACERLO PARA LLEVARMELO A CLASES)
     lista.style.display= "none";
     menuBurger.style.display= "block";
     menuEquis.style.display= "none";
@@ -90,10 +88,14 @@ function introduceD(event) {
     let valueMail = event.target.value;
 
     if(expRegularCorreo.test(valueMail)){
-        correo.style.borderBottom = "2px solid #55DFB4";
+        // correo.style.borderBottom = "2px solid #55DFB4";
+        correo.classList.remove('inp','incorrectValues');
+        correo.classList.add('correctValues');
     }
     else{
-        correo.style.borderBottom = "2px solid red";
+        // correo.style.borderBottom = "2px solid red";
+        correo.classList.remove('inp', 'correctValues');
+        correo.classList.add('incorrectValues');
     }
 }
 
@@ -101,9 +103,13 @@ function introduceN(e) {
     let expRegularNombre = /^\S+[a-zA-Z]$/;
     let valueMail = e.target.value;
     if (expRegularNombre.test(valueMail)) {
-        nombre.style.borderBottom = "2px solid #55DFB4";
+        // nombre.style.borderBottom = "2px solid #55DFB4";
+        nombre.classList.remove('inp', 'incorrectValues');
+        nombre.classList.add('correctValues');
     }else{
-        nombre.style.borderBottom = "2px solid red";
+        // nombre.style.borderBottom = "2px solid red";
+        nombre.classList.remove('inp', 'correctValues');
+        nombre.classList.add('incorrectValues');
     }
 }
 correo.addEventListener('change', introduceD);
