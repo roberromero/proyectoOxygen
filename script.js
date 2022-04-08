@@ -1,6 +1,6 @@
-//Para asegurar que todo se ha cargado
-document.addEventListener("DOMContentLoaded", function() {
-
+// //Para asegurar que todo se ha cargado
+// document.addEventListener("DOMContentLoaded", function() {
+// });
 
 
 //MENú DESPLEGABLE
@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Función desplegar el menú
 const openMenu= () => {
-    
+    lista.style.display = "flex";
+    menuEquis.style.display= "block";
+    menuBurger.style.display= "none";
 }
 
 //Función plegar el menú
@@ -44,7 +46,7 @@ let progressbar = document.getElementById('progressbar__inner');
         console.log(percent);
         progressbar.style.width= `${percent}%`;
     })
-});
+
 
 
 //RETURNTOP BUTTON
@@ -82,6 +84,21 @@ let regularExp = new RegExp ("");
 
 let correo = document.getElementById('correo');
 let nombre = document.getElementById('fname');
+let aceptar = document.getElementById('aceptar');
+
+function introduceN(e) {
+    let expRegularNombre = /^\S+[a-zA-Z]$/;
+    let valueMail = e.target.value;
+    if (expRegularNombre.test(valueMail)) {
+        // nombre.style.borderBottom = "2px solid #55DFB4";
+        nombre.classList.remove('inp', 'incorrectValues');
+        nombre.classList.add('correctValues');
+    }else{
+        // nombre.style.borderBottom = "2px solid red";
+        nombre.classList.remove('inp', 'correctValues');
+        nombre.classList.add('incorrectValues');
+    }
+}
 
 function introduceD(event) {
     let expRegularCorreo = /(\w+)\@(\w+)\.(\w+)$/gi;
@@ -99,21 +116,34 @@ function introduceD(event) {
     }
 }
 
-function introduceN(e) {
-    let expRegularNombre = /^\S+[a-zA-Z]$/;
-    let valueMail = e.target.value;
-    if (expRegularNombre.test(valueMail)) {
-        // nombre.style.borderBottom = "2px solid #55DFB4";
-        nombre.classList.remove('inp', 'incorrectValues');
-        nombre.classList.add('correctValues');
-    }else{
-        // nombre.style.borderBottom = "2px solid red";
-        nombre.classList.remove('inp', 'correctValues');
-        nombre.classList.add('incorrectValues');
-    }
-}
+// let labelCheckBox = document.querySelector('.last__pregform-form-formu-aceptar-checkbox');
+
+// function introduceTick() {
+//     let check= aceptar.checked;
+//     if(check){
+//         labelCheckBox.style.border= "2px solid #55DFB4";
+//     }else{
+//         labelCheckBox.style.border= "2px solid red";
+//     }
+// }
+// aceptar.addEventListener('click', introduceTick);
+
 correo.addEventListener('change', introduceD);
 nombre.addEventListener('change', introduceN);
 
+//RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing
 
-correo.addEventListener('keypress',introduceD());
+
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+
+
+
+
+
+
+  
+

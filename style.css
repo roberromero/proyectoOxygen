@@ -859,9 +859,16 @@ hr{
     font-family: var(--fuente-secundaria);
     color: #707070;
 }
+
+    
 .last__pregform-form-formu-aceptar-checkbox{
     position: absolute;
-    
+    display: inline-block;
+    width: auto;
+    height: 19px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 
