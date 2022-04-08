@@ -82,6 +82,7 @@ let regularExp = new RegExp ("");
 //- Estática (no se puede modificar durante la ejecución):
 // let expRegular = /(\w+)\@(\w+)\.(\w+)$/gi;
 
+//VARIABLES para el campo nombre y correo de los inputs
 let correo = document.getElementById('correo');
 let nombre = document.getElementById('fname');
 let aceptar = document.getElementById('aceptar');
@@ -98,6 +99,7 @@ function introduceN(e) {
         nombre.classList.remove('inp', 'correctValues');
         nombre.classList.add('incorrectValues');
     }
+    
 }
 
 function introduceD(event) {
@@ -114,6 +116,7 @@ function introduceD(event) {
         correo.classList.remove('inp', 'correctValues');
         correo.classList.add('incorrectValues');
     }
+    
 }
 
 // let labelCheckBox = document.querySelector('.last__pregform-form-formu-aceptar-checkbox');
@@ -121,10 +124,10 @@ function introduceD(event) {
 // function introduceTick() {
 //     let check= aceptar.checked;
 //     if(check){
-//         labelCheckBox.style.border= "2px solid #55DFB4";
+//         return true;
 //     }else{
-//         labelCheckBox.style.border= "2px solid red";
-//     }
+//         return false;
+//     }    
 // }
 // aceptar.addEventListener('click', introduceTick);
 
@@ -134,10 +137,34 @@ nombre.addEventListener('change', introduceN);
 //RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing
 
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+document.querySelector('#formButton').addEventListener('click', ()=> {
+    let valorNombre= document.getElementById('fname').value;
+    let valorCorreo= document.getElementById('correo').value;
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: valorNombre,
+            correo: valorCorreo
+        })
+    })
+      .then( response => {
+        if (response.ok){
+          console.log("No hubo errores");
+        }else{
+          console.log("Hubo un error");
+        }
+       return response.json()
+        })  
+      .then((json) => console.log(json))//Recogemos el objeto para mostrar en pantalla
+      .catch((err=>{                    //Este método te devuelve el error en forma de object
+          console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
+      }));
 
+
+})
 
 
 
