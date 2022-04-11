@@ -852,6 +852,7 @@ hr{
 
 .last__pregform-form-formu-aceptar{
     display: flex;
+    justify-content: flex-end;
 }
 .last__pregform-form-formu-aceptar{
     margin-left: 20px;
@@ -873,9 +874,8 @@ hr{
 
 
 /*--------------------------*/
-.last__pregform-form-formu-aceptar input{
-    top: 366px;
-    left: 87px;
+.last__pregform-form-formu-aceptar button{
+    margin-top: 22px;
     width: 226px;
     height: 57px;
     background: #08A6E4;
@@ -884,7 +884,6 @@ hr{
     font-family: var(--fuente-secundaria);
     color:#FFFFFF;
     border: #08A6E4;
-    position: absolute;
     font-size: 13px;
     font-weight: 800;
     line-height: 17.7px;
@@ -1309,15 +1308,14 @@ header{
     color: #707070;
 }
 
-.last__pregform-form-formu-aceptar input{
-    top: 302px;
+.last__pregform-form-formu-aceptar button{
     left: 220px;
  
 }
 .last__pregform-form-formu-email{
     padding-bottom: 10px
 }
-.last__pregform-form-formu-aceptar input:hover{
+.last__pregform-form-formu-aceptar button:hover{
     box-shadow:  7px 5px 12px 1px rgba(7,172,230,0.29);
     cursor: pointer;
    
