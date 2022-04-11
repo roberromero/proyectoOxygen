@@ -205,9 +205,6 @@ nombre.addEventListener('change', introduceN);
 //RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing + COMPROBAR QUE NO EXISTEN ERRORES
 
 
-
-
-
 document.querySelector('#formulario').addEventListener('submit', (event)=> {
     event.preventDefault();
      
@@ -236,11 +233,12 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
             }
            return response.json()
             })  
-          .then((json) => console.log(json))//Recogemos el objeto para mostrar en pantalla
+          .then((json) => console.log(json) )//Recogemos el objeto para mostrar en pantalla
           .catch((err=>{                    //Este método te devuelve el error en forma de object
               console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
           }));
-    
+          const formuId= "#formulario";
+          clearForm(formuId);
     }else{
         alert("NO ENTRÓ");//Aquí podría manipular el mensaje cuando no es correcto
         console.log("no entró");
@@ -250,7 +248,11 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
 
 })
 
-
+const clearForm = (formulario) => {
+    
+    let data= document.querySelector(`${formulario} input[type="text"]`);
+    data.value = " ";
+}
 
 
 
