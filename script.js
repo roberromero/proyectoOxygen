@@ -33,8 +33,9 @@ menuEquis.addEventListener('click', closeMenu);
 //SCROLLBAR
 
 let progressbar = document.getElementById('progressbar__inner');
-
+let rep = true;
     window.addEventListener('scroll', () => {
+     
         //Obtenemos el objeto html (el objeto raíz)
         let h = document.documentElement; 
         
@@ -43,9 +44,78 @@ let progressbar = document.getElementById('progressbar__inner');
 
         let sh = h.scrollHeight ||this.document.body.scrollHeight;
         let percent = st / (sh - h.clientHeight) * 100;
-        console.log(percent);
+        
+        //--LLAMAMOS A LA FUNCIÓN AL 25% (SOLO UNA VEZ)
+        
+        if(rep == true && Math.round(percent)==25){
+            //Llamo a la función---------
+            setTimeout(popIni);
+
+            rep =false;
+        }
+        //-----------------------------
         progressbar.style.width= `${percent}%`;
     })
+
+
+// POPUP
+
+// aparece tras 5 segundos y/o 25% scrollDown
+
+const popUp = document.getElementById('pop'); //VENTANA COMPLETA DEL POPUP
+const xPopUp = document.getElementById('x-popup'); // X PARA CERRARLO 
+
+const popIni = ()=> {
+    popUp.style.visibility= "visible";
+}
+
+const closePopUp = () => {
+    popUp.style.visibility= "hidden";
+}
+xPopUp.addEventListener('click', closePopUp);
+
+setTimeout(popIni, 5000);
+
+
+//VALIDACIón DEL FORMULARIO DEL POPup
+let formuPopUp = document.querySelector('#form-popup');
+
+formuPopUp.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    let correoPop = document.getElementById('correo-popup');
+    let checkPopUp = document.getElementById('check-popup');
+
+    if(/(\w+)\@(\w+)\.(\w+)$/gi.test(correoPop.value) && checkPopUp.checked){
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                correoPop: correoPop.value,
+            })
+        })
+          .then( response => {
+            if (response.ok){
+              console.log("No hubo errores");
+            }else{
+              console.log("Hubo un error");
+            }
+           return response.json()
+            })  
+          .then((json) => console.log(json))
+          .catch((err=>{                    
+              console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
+          }));
+    }else{
+        alert("NO COMPLETADO");
+    }
+
+
+} )
+
+
 
 
 
@@ -179,7 +249,6 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
  
 
 })
-
 
 
 
