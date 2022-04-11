@@ -101,6 +101,71 @@ nav{
 #returnTop{
     display: none;
 }
+
+/* POP-UP */
+.popup{
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+   
+}
+.popup__cont{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px #777575;
+    background-color: #F7F7F7;
+    padding: 10px 10px 0 10px;
+}
+.popup__cont > img{
+    float: right;
+    width: 25px;
+}
+#form-popup{
+    
+    padding-top: 15px;
+    
+}
+.form-divs{
+    padding: 16px;
+    text-align: left;
+}
+.cor-nam{
+    color: #08A6E4;
+    line-height: 14.98px;
+    font-size: 14px;
+}
+.form-divs-right{
+    text-align: right;
+    
+}
+.form-divs-right >input{
+    width: 150px;
+    height: 50px;
+    background-color: #07ACE6;
+    border-radius: 23px;
+    font-family: var(--fuente-secundaria);
+    color: #FFFFFF;
+    border: #07ACE6;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.7px;
+    cursor: pointer;
+}
+.inter{
+    font-size: 10px;
+}
+
+#correo-popup{
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
 /*MAIN*/
 
 .main{
@@ -958,6 +1023,8 @@ header{
     box-shadow: 0px 3px 6px #00000010;
 }
 
+
+
 #progressbar{
     width: 100%;
     position: absolute;
@@ -1042,7 +1109,10 @@ header{
  #returnTop:hover{
     background-color: #b2d3df;
  }
- 
+ /*----Pop-Up----------*/
+ .popup__cont{
+     width: 50%;
+ }
     
     /*---Ajustar imagen--*/
 .main__text h2{
