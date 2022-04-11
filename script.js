@@ -72,10 +72,9 @@ returnTop.addEventListener('click', delayTop);
 
 //VALIDACIÓN DEL FORMULARIO
 
+
+
 //Utilizaremos el objeto "RegExp"
-
-
-
 //Se puede hacer de 2 formas:
 //- Instanciando el objeto
 let regularExp = new RegExp ("");
@@ -83,86 +82,101 @@ let regularExp = new RegExp ("");
 // let expRegular = /(\w+)\@(\w+)\.(\w+)$/gi;
 
 //VARIABLES para el campo nombre y correo de los inputs
-let correo = document.getElementById('correo');
-let nombre = document.getElementById('fname');
-let aceptar = document.getElementById('aceptar');
+const correo = document.getElementById('correo');
+const nombre = document.getElementById('fname');
+const aceptar = document.getElementById('aceptar');
+const expRegularNombre = /^\S+[a-zA-Z]$/;
+const expRegularCorreo = /(\w+)\@(\w+)\.(\w+)$/gi;
+
+
+
+//CAMBIO DE COLOR PARA INDICAR AL USUARIO SI EL CAMPO ES CORRECTO O NO
 
 function introduceN(e) {
-    let expRegularNombre = /^\S+[a-zA-Z]$/;
     let valueMail = e.target.value;
+ 
     if (expRegularNombre.test(valueMail)) {
         // nombre.style.borderBottom = "2px solid #55DFB4";
         nombre.classList.remove('inp', 'incorrectValues');
         nombre.classList.add('correctValues');
+        
     }else{
         // nombre.style.borderBottom = "2px solid red";
         nombre.classList.remove('inp', 'correctValues');
         nombre.classList.add('incorrectValues');
+        
     }
-    
+    return valueMail;
 }
 
 function introduceD(event) {
-    let expRegularCorreo = /(\w+)\@(\w+)\.(\w+)$/gi;
     let valueMail = event.target.value;
 
     if(expRegularCorreo.test(valueMail)){
         // correo.style.borderBottom = "2px solid #55DFB4";
         correo.classList.remove('inp','incorrectValues');
         correo.classList.add('correctValues');
+        
     }
     else{
         // correo.style.borderBottom = "2px solid red";
         correo.classList.remove('inp', 'correctValues');
         correo.classList.add('incorrectValues');
+        
     }
+   
     
 }
-
-// let labelCheckBox = document.querySelector('.last__pregform-form-formu-aceptar-checkbox');
-
-// function introduceTick() {
-//     let check= aceptar.checked;
-//     if(check){
-//         return true;
-//     }else{
-//         return false;
-//     }    
-// }
-// aceptar.addEventListener('click', introduceTick);
 
 correo.addEventListener('change', introduceD);
 nombre.addEventListener('change', introduceN);
 
-//RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing
+
+//RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing + COMPROBAR QUE NO EXISTEN ERRORES
 
 
-document.querySelector('#formButton').addEventListener('click', ()=> {
-    let valorNombre= document.getElementById('fname').value;
-    let valorCorreo= document.getElementById('correo').value;
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: valorNombre,
-            correo: valorCorreo
+
+
+
+document.querySelector('#formulario').addEventListener('submit', (event)=> {
+    event.preventDefault();
+     
+    let nameIsValid = expRegularNombre.test(nombre.value);
+    let correoIsValid = /(\w+)\@(\w+)\.(\w+)$/gi.test(correo.value);
+    let checkBoxIsValid = aceptar.checked;
+  
+    if( nameIsValid && correoIsValid && checkBoxIsValid ){
+        console.log("ENTRO");
+        
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: nombre.value,
+                correo: correo.value
+            })
         })
-    })
-      .then( response => {
-        if (response.ok){
-          console.log("No hubo errores");
-        }else{
-          console.log("Hubo un error");
-        }
-       return response.json()
-        })  
-      .then((json) => console.log(json))//Recogemos el objeto para mostrar en pantalla
-      .catch((err=>{                    //Este método te devuelve el error en forma de object
-          console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
-      }));
+          .then( response => {
+            if (response.ok){
+              console.log("No hubo errores");
+            }else{
+              console.log("Hubo un error");
+            }
+           return response.json()
+            })  
+          .then((json) => console.log(json))//Recogemos el objeto para mostrar en pantalla
+          .catch((err=>{                    //Este método te devuelve el error en forma de object
+              console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
+          }));
+    
+    }else{
+        alert("NO ENTRÓ");//Aquí podría manipular el mensaje cuando no es correcto
+        console.log("no entró");
+    }
 
+ 
 
 })
 
