@@ -108,6 +108,8 @@ formuPopUp.addEventListener('submit', (e)=> {
           .catch((err=>{                    
               console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
           }));
+          clearFormPopUp();
+          alert("ENVIADO CON ÉXITO");
     }else{
         alert("NO COMPLETADO");
     }
@@ -239,6 +241,7 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
           }));
           const formuId= "#formulario";
           clearForm(formuId);
+          alert("ENVIADO CON ÉXITO");
     }else{
         alert("NO ENTRÓ");//Aquí podría manipular el mensaje cuando no es correcto
         console.log("no entró");
@@ -248,13 +251,28 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
 
 })
 
+//FUNCIÓN PARA LIMPIAR EL FORMULARIO
 const clearForm = (formulario) => {
     
     let data= document.querySelector(`${formulario} input[type="text"]`);
+    let data2= document.querySelector(`${formulario} input[type="email"]`);
+    let data3= document.querySelector(`${formulario} input[type="checkbox"]`)
     data.value = " ";
+    data2.value = " ";
+    data3.checked = false;
+
+    //SOLO CON ESTA PROPIEDAD, FUNCIONA
+    const sentConfirm = () => {
+        location.reload();
+    }
+    setTimeout(sentConfirm, 5000);
+    
 }
 
-
+//FUNCIÓN PARA QUITAR EL POPUP TRAS EL ENVIO DE DATOS
+const clearFormPopUp = () => {
+    document.getElementById('pop').style.visibility = "hidden";
+}
 
 
   
