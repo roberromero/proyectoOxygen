@@ -538,14 +538,20 @@ hr{
 
 /*PALABRA "PRICING"*/
 
-.last__pricing{
+.last__pricing >h2{
     font-size: 36px;
     line-height: 42.26px;
     text-align: center;
     position: relative;
     padding-top: 43px;
 }
-
+.last__pricing > form{
+    margin-bottom: 35px;
+    text-align: center;
+}
+.last{
+    margin-right:50px
+}
 
 
 /*PRECIO dentro de la clase "last"*/
@@ -1114,7 +1120,14 @@ header{
  .popup__cont{
      width: 50%;
  }
-    
+
+ /*--PRICING--*/
+ .last__pricing{
+    margin-right:50px
+}
+.last__pricing > form{
+    margin-bottom: 20px;
+}
     /*---Ajustar imagen--*/
 .main__text h2{
     font-size: 49px;
