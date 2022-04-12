@@ -1368,6 +1368,23 @@ header{
 .last__prices-containers{
     padding-right: 50px;
 }
+
+
+/*-- SLIDER--*/
+
+.slider-container{
+    width: auto;
+    height: 600px;
+    background-color: #07ACE6;
+
+}
+.slider-container__int{
+    background-color: pink;
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+/*----*/
 .last__pregform{
     flex-direction: row;
     justify-content: center;

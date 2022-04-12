@@ -254,16 +254,16 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
 //FUNCIÓN PARA LIMPIAR EL FORMULARIO
 const clearForm = (formulario) => {
     
-    let data= document.querySelector(`${formulario} input[type="text"]`);
-    let data2= document.querySelector(`${formulario} input[type="email"]`);
-    let data3= document.querySelector(`${formulario} input[type="checkbox"]`)
-    data.value = " ";
-    data2.value = " ";
-    data3.checked = false;
+    // let data= document.querySelector(`${formulario} input[type="text"]`);
+    // let data2= document.querySelector(`${formulario} input[type="email"]`);
+    // let data3= document.querySelector(`${formulario} input[type="checkbox"]`)
+    // data.value = " ";
+    // data2.value = " ";
+    // data3.checked = false;
 
     //SOLO CON ESTA PROPIEDAD, FUNCIONA
     const sentConfirm = () => {
-        location.reload();
+        document.querySelector('#formulario').reset();
     }
     setTimeout(sentConfirm, 5000);
     
@@ -274,6 +274,27 @@ const clearFormPopUp = () => {
     document.getElementById('pop').style.visibility = "hidden";
 }
 
+//CONVERSOR DE MONEDA
 
+// --BUILDING---------------------
   
+fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json')
+          .then( response => {
+                if(response.ok){
+                    return response.json(); //convierte la respuesta en un objeto
+                }
+            })
+            .then(data=> {
+                const euro= {data.usd["eur"], data.usd[""] } ;
+            })
+          
+          
+        //   .then(data => console.log(data));
+          
 
+
+
+
+        //SLIDER
+
+        
