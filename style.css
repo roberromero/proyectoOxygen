@@ -1364,7 +1364,6 @@ header{
 
 }
 .slider-container__int{
-    background-image: url("img/slider/slider1.jpg");
     overflow: hidden;
     height: 60%;
     width: 50%;
@@ -1387,8 +1386,11 @@ header{
     right: 20px;
     top: 180px;
     border-radius: 50%;
-    border: none;
+    border: 2px solid transparent;
     background: transparent;
+}
+#right-button:hover, #left-button:hover{
+    border: 2px solid rgb(188, 194, 188);
 }
 #right-arrow{
     width:40px;
@@ -1398,7 +1400,7 @@ header{
     top: 180px;
     left: 20px;
     border-radius: 50%;
-    border: none;
+    border: 2px solid transparent;
     background: transparent;
 }
 #left-arrow{

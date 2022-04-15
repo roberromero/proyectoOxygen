@@ -342,6 +342,59 @@ let currencies= ["$", "€", "£"];
 
 
      const imagesSlider= document.getElementById('imagesSlider');
-
-     imagesSlider.style.backgroundImage= "url('img/slider/slider2.jpg')"
+     imagesSlider.style.backgroundImage= "url('img/slider/slider1.jpg')"
     
+    //Capturo botones
+     const rightButton = document.getElementById('right-button');
+     const leftButton = document.getElementById('left-button');
+
+    //Variable para la posición actual
+    let currentPosition = 0;
+    //Array con imágenes
+    const arrayImages = ['img/slider/slider1.jpg', 'img/slider/slider2.jpg', 'img/slider/slider3.jpg', 'img/slider/slider4.jpg'];
+
+
+
+    const changeImg= (position) =>{
+        const img = arrayImages[position]; 
+        const frame = document.getElementById('imagesSlider');
+        frame.style.backgroundImage = `url(${img})`;
+        frame.style.transitionDuration = '1.5s';
+        
+    }
+
+    const modifyBulletColor = (position) => {
+        for(let i= 0; i<document.getElementsByClassName('bullets').length; i++){
+            if(i !=position){
+                document.getElementsByClassName('bullets')[i].style.background = "#707070";
+            }else{
+                document.getElementsByClassName('bullets')[i].style.background = "black";
+            }
+        }
+    }
+    const pressLeft = () => {
+        if(currentPosition==0){
+            currentPosition = 3;
+        }else{
+            currentPosition--;
+        }
+        changeImg(currentPosition);
+        modifyBulletColor(currentPosition);
+
+    }
+    const pressRight = () => {
+        if(currentPosition==3){
+            currentPosition = 0;
+        }else{
+            currentPosition++;
+        }
+        changeImg(currentPosition);
+        modifyBulletColor(currentPosition);
+      
+    }
+    
+    setInterval('pressRight()', 3000);
+   
+
+    leftButton.addEventListener('click', pressLeft);
+    rightButton.addEventListener('click', pressRight);
