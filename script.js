@@ -347,7 +347,7 @@ let currencies= ["$", "€", "£"];
      const rightButton = document.getElementById('right-button');
      const leftButton = document.getElementById('left-button');
 
-    //Variable para la posición actual
+    //Variable para la posición actual la inicio a "0"
     let currentPosition = 0;
     //Array con imágenes
     const arrayImages = ['img/slider/slider1.jpg', 'img/slider/slider2.jpg', 'img/slider/slider3.jpg', 'img/slider/slider4.jpg'];
@@ -372,21 +372,23 @@ let currencies= ["$", "€", "£"];
         }
     }
     const pressLeft = () => {
-        if(currentPosition==0){
-            currentPosition = 3;
-        }else{
-            currentPosition--;
-        }
+        // if(currentPosition==0){
+        //     currentPosition = 3;
+        // }else{
+        //     currentPosition--;
+        // }
+        currentPosition==0 ? currentPosition=3 : currentPosition--;//ternary operator
         changeImg(currentPosition);
         modifyBulletColor(currentPosition);
 
     }
     const pressRight = () => {
-        if(currentPosition==3){
-            currentPosition = 0;
-        }else{
-            currentPosition++;
-        }
+        // if(currentPosition==3){
+        //     currentPosition = 0;
+        // }else{
+        //     currentPosition++;
+        // }
+        currentPosition==3 ? currentPosition=0 : currentPosition++; //ternary operator
         changeImg(currentPosition);
         modifyBulletColor(currentPosition);
       
