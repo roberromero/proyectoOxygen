@@ -562,6 +562,39 @@ hr{
     height: auto;
 }
 
+/*-- SLIDER--*/
+
+.slider-container{
+    width: auto;
+    height: 300px;
+    background-color: transparent;
+
+}
+.slider-container__int{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-position: center center;
+    background-size: cover;
+
+}
+.slider-container__bullets{
+    display: flex;
+    padding: 15px;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+}
+.slider-buttons{
+    display: none;
+}
+.bullets{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #707070;
+}
+
 /*Para recoger 3 tarjetas*/
 .last__prices{
     display: flex;
@@ -1111,6 +1144,7 @@ header{
  }
  #returnTop__im{
     padding: 4px;
+    width: 50px;
  }
  
  #returnTop:hover{
@@ -1320,6 +1354,59 @@ header{
     height: 207.72px;
     left: 80px;
 }
+
+/*-- SLIDER--*/
+
+.slider-container{
+    width: auto;
+    height: 600px;
+    background-color: transparent;
+
+}
+.slider-container__int{
+    background-image: url("img/slider/slider1.jpg");
+    overflow: hidden;
+    height: 60%;
+    width: 50%;
+    position: relative;
+    
+}
+.slider-container__bullets{
+    display: flex;
+    padding: 15px;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: 0 auto;
+}
+.slider-buttons{
+    display:inline-block;
+}
+#right-button{
+    position: absolute;
+    left: 50p;
+    right: 20px;
+    top: 180px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+}
+#right-arrow{
+    width:40px;
+}
+#left-button{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+}
+#left-arrow{
+    width:40px;
+}
+
+
+
 .last__pricing{
     padding-bottom: 40px;
 }
@@ -1369,20 +1456,6 @@ header{
     padding-right: 50px;
 }
 
-
-/*-- SLIDER--*/
-
-.slider-container{
-    width: auto;
-    height: 600px;
-    background-color: #07ACE6;
-
-}
-.slider-container__int{
-    background-color: pink;
-    margin: 0 auto;
-    max-width: 940px;
-}
 
 /*----*/
 .last__pregform{

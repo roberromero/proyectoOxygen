@@ -275,9 +275,6 @@ const clearFormPopUp = () => {
 }
 
 //CONVERSOR DE MONEDA
-
-// --BUILDING---------------------
-  
   
     const refPriceProf = "25";
     const refPricePrem = "60";
@@ -295,10 +292,6 @@ selectCurrency.addEventListener('change', () => {
           //TOMAR DATOS DE LA API (TOMANDO COMO REFERENCIA LOS DOLARES)
            const valorEuro= data.usd["eur"];
            const valorPound = data.usd["gbp"];
-            console.log(valorEuro);
-          
-
-          
           
             if(selectCurrency.value==1){
                 changeAmount(selectCurrency.value, valorEuro );
@@ -314,14 +307,11 @@ selectCurrency.addEventListener('change', () => {
 
 const changeAmount = (posicion, valorCurrency) => {
 
-    //ALMACENAN EL PRECIO INICIAL DE "USD" SIN EL SÍMBOLO
-    // let profeUsd= document.getElementById('priceProfe').textContent.match(/\d+/).toString();
-    // let premUsd = document.getElementById('pricePremium').textContent.match(/\d+/).toString();
 //ARRAY CON SÍMBOLOS
 let currencies= ["$", "€", "£"];
     //cambio a euros
     if(posicion == "1"){    
-        console.log(posicion);
+       
         const res = Math.round(refPriceProf * valorCurrency);
         const res2 = Math.round(refPricePrem * valorCurrency);
         document.getElementById('priceBasic').innerHTML = `0 ${currencies[posicion]}`;
@@ -330,7 +320,7 @@ let currencies= ["$", "€", "£"];
         
     //cambio a libras
     }else if(posicion == "2"){
-        console.log(posicion);
+
         const res = Math.round(refPriceProf * valorCurrency);
         const res2 = Math.round(refPricePrem * valorCurrency);
         document.getElementById('priceBasic').innerHTML = `${currencies[posicion]}0`;
@@ -338,7 +328,7 @@ let currencies= ["$", "€", "£"];
         document.getElementById('pricePremium').innerHTML = `${currencies[posicion]}` + res2 ;
     //valor inicial
     }else if(posicion == "0"){
-        console.log(posicion);
+      
         document.getElementById('priceBasic').innerHTML = `${currencies[posicion]}0`;
         document.getElementById('priceProfe').innerHTML = `${currencies[posicion]}` + refPriceProf;
         document.getElementById('pricePremium').innerHTML = `${currencies[posicion]}` + refPricePrem;
@@ -346,10 +336,12 @@ let currencies= ["$", "€", "£"];
 
 }
             
-            
-            
-       
         
-        //SLIDER
+        
+     //SLIDER
 
-        
+
+     const imagesSlider= document.getElementById('imagesSlider');
+
+     imagesSlider.style.backgroundImage= "url('img/slider/slider2.jpg')"
+    
