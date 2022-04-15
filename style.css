@@ -582,15 +582,15 @@ hr{
     display: flex;
     padding: 15px;
     justify-content: space-evenly;
-    width: 50%;
+    width: 25%;
     margin: 0 auto;
 }
 .slider-buttons{
     display: none;
 }
 .bullets{
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #707070;
 }
@@ -1105,10 +1105,12 @@ header{
 .list__item{
     
     margin-right: 60px;
+    border-bottom: transparent;
 
 }
 
-.list__item a{
+.list__item > a{
+    height: 47px;
     font-weight: 900;
     font-weight: bolder;
 
@@ -1144,7 +1146,7 @@ header{
  }
  #returnTop__im{
     padding: 4px;
-    width: 50px;
+    width: 40px;
  }
  
  #returnTop:hover{
@@ -1359,14 +1361,14 @@ header{
 
 .slider-container{
     width: auto;
-    height: 600px;
+    height: auto;
     background-color: transparent;
 
 }
 .slider-container__int{
     overflow: hidden;
-    height: 60%;
-    width: 50%;
+    height: 400px;
+    width: 680px;
     position: relative;
     
 }
@@ -1374,7 +1376,7 @@ header{
     display: flex;
     padding: 15px;
     justify-content: space-evenly;
-    width: 20%;
+    width: 10%;
     margin: 0 auto;
 }
 .slider-buttons{
@@ -1407,7 +1409,7 @@ header{
     width:40px;
 }
 
-
+/*-----*/
 
 .last__pricing{
     padding-bottom: 40px;
