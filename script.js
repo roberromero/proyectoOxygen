@@ -278,23 +278,78 @@ const clearFormPopUp = () => {
 
 // --BUILDING---------------------
   
-fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json')
-          .then( response => {
-                if(response.ok){
-                    return response.json(); //convierte la respuesta en un objeto
-                }
-            })
-            .then(data=> {
-                const euro= {data.usd["eur"], data.usd[""] } ;
-            })
+  
+    const refPriceProf = "25";
+    const refPricePrem = "60";
+    
+let selectCurrency = document.getElementById('selectCurrency');
+selectCurrency.addEventListener('change', () => {
+
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json")
+    .then( response => {
+          if(response.ok){
+              return response.json(); //convierte la respuesta en un objeto
+          }
+      })
+      .then(data=> {
+          //TOMAR DATOS DE LA API (TOMANDO COMO REFERENCIA LOS DOLARES)
+           const valorEuro= data.usd["eur"];
+           const valorPound = data.usd["gbp"];
+            console.log(valorEuro);
+          
+
           
           
-        //   .then(data => console.log(data));
+            if(selectCurrency.value==1){
+                changeAmount(selectCurrency.value, valorEuro );
+            }else if(selectCurrency.value ==2) {
+                changeAmount(selectCurrency.value, valorPound );
+            }else{
+                changeAmount(selectCurrency.value);
+            }
           
+          
+      })
+});  
 
+const changeAmount = (posicion, valorCurrency) => {
 
+    //ALMACENAN EL PRECIO INICIAL DE "USD" SIN EL SÍMBOLO
+    // let profeUsd= document.getElementById('priceProfe').textContent.match(/\d+/).toString();
+    // let premUsd = document.getElementById('pricePremium').textContent.match(/\d+/).toString();
+//ARRAY CON SÍMBOLOS
+let currencies= ["$", "€", "£"];
+    //cambio a euros
+    if(posicion == "1"){    
+        console.log(posicion);
+        const res = Math.round(refPriceProf * valorCurrency);
+        const res2 = Math.round(refPricePrem * valorCurrency);
+        document.getElementById('priceBasic').innerHTML = `0 ${currencies[posicion]}`;
+        document.getElementById('priceProfe').innerHTML = res + ` ${currencies[posicion]}`;
+        document.getElementById('pricePremium').innerHTML = res2 + ` ${currencies[posicion]}`;
+        
+    //cambio a libras
+    }else if(posicion == "2"){
+        console.log(posicion);
+        const res = Math.round(refPriceProf * valorCurrency);
+        const res2 = Math.round(refPricePrem * valorCurrency);
+        document.getElementById('priceBasic').innerHTML = `${currencies[posicion]}0`;
+        document.getElementById('priceProfe').innerHTML = `${currencies[posicion]}` + res  ;
+        document.getElementById('pricePremium').innerHTML = `${currencies[posicion]}` + res2 ;
+    //valor inicial
+    }else if(posicion == "0"){
+        console.log(posicion);
+        document.getElementById('priceBasic').innerHTML = `${currencies[posicion]}0`;
+        document.getElementById('priceProfe').innerHTML = `${currencies[posicion]}` + refPriceProf;
+        document.getElementById('pricePremium').innerHTML = `${currencies[posicion]}` + refPricePrem;
+    }
 
-
+}
+            
+            
+            
+       
+        
         //SLIDER
 
         

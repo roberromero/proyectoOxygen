@@ -208,6 +208,7 @@
 <!--TERCERA SECCIÓN "PRECIO Y PREGUNTAS"-->
     <section class="last">
        <!--SLIDER-->
+
     <div class="slider-container">
             <div class="slider-container__int">
 
@@ -218,10 +219,10 @@
         <div class="last__pricing">
             <h2 class="" id="price">Pricing</h2>
             <form action="">
-                <select name="Choose currency: " id="">
-                    <option value="EUR">EUR</option>
-                    <option value="USD">USD</option>
-                    <option value="GBP">GBP</option>
+                <select name="Choose currency: " id="selectCurrency">
+                    <option value="0">USD</option>
+                    <option value="1">EUR</option>
+                    <option value="2">GBP</option>
                 </select>
             </form>
         </div>
@@ -237,7 +238,7 @@
                                 
                                 <div class="last__prices-basic-left">
                                     <h3 class="last__prices-basic-left-op">Basic</h3>
-                                    <p class="last__prices-basic-left-pr">$0</p>
+                                    <p class="last__prices-basic-left-pr" id="priceBasic">$0</p>
                                 </div>
 
 
@@ -279,7 +280,7 @@
                                 
                     <div class="last__prices-profe-left">
                         <h3 class="last__prices-profe-left-op">Professional</h3>
-                        <p class="last__prices-profe-left-pr">$25</p>
+                        <p class="last__prices-profe-left-pr" id="priceProfe">$25</p>
                         <p class="last__prices-profe-left-of">Limited offer</p>
                     </div>
 
@@ -323,7 +324,7 @@
                                 
                         <div class="last__prices-premium-left">
                             <h3 class="last__prices-premium-left-op">Premium</h3>
-                            <p class="last__prices-premium-left-pr">$60</p>
+                            <p class="last__prices-premium-left-pr" id="pricePremium">$60</p>
                             <p class="last__prices-premium-left-of">Limited offer</p>
                         </div>
     
