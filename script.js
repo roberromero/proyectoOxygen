@@ -120,7 +120,6 @@ formuPopUp.addEventListener('submit', (e)=> {
 
 
 
-
 //RETURNTOP BUTTON
 
 let returnTop = document.getElementById('returnTop');
