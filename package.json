@@ -1,0 +1,19 @@
+{
+  "name": "proyectooxygen",
+  "version": "1.0.0",
+  "description": "This is my first proyect as a web developer, it is called **\"proyectoOxygen\"**.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roberromero/proyectoOxygen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roberromero/proyectoOxygen/issues"
+  },
+  "homepage": "https://github.com/roberromero/proyectoOxygen#readme"
+}
