@@ -3,6 +3,8 @@
 // });
 
 
+
+
 //MENú DESPLEGABLE
 
 //Declaro las variables
@@ -30,6 +32,9 @@ menuBurger.addEventListener('click', openMenu);
 menuEquis.addEventListener('click', closeMenu);
 
 
+
+sessionStorage.setItem("seen", "0");//Variable para almacenar si el popUp se ha visto//******/
+
 //SCROLLBAR
 
 let progressbar = document.getElementById('progressbar__inner');
@@ -49,9 +54,14 @@ let rep = true;
         
         if(rep == true && Math.round(percent)==25){
             //Llamo a la función---------
-            setTimeout(popIni);
-
-            rep =false;
+           
+            if(sessionStorage.getItem("seen") == "0"){
+                
+                popIni();
+                sessionStorage.setItem("seen", "1");
+            }
+                 
+                
         }
         //-----------------------------
         progressbar.style.width= `${percent}%`;
@@ -60,13 +70,19 @@ let rep = true;
 
 // POPUP
 
-// aparece tras 5 segundos y/o 25% scrollDown
+
+// aparece tras 5 segundos o 25% scrollDown
 
 const popUp = document.getElementById('pop'); //VENTANA COMPLETA DEL POPUP
 const xPopUp = document.getElementById('x-popup'); // X PARA CERRARLO 
 
 const popIni = ()=> {
-    popUp.style.visibility= "visible";
+    if(sessionStorage.getItem("seen") == "0"){
+        popUp.style.visibility= "visible";
+        sessionStorage.setItem("seen", "1");
+    }
+    
+    
 }
 
 const closePopUp = () => {
@@ -74,7 +90,17 @@ const closePopUp = () => {
 }
 xPopUp.addEventListener('click', closePopUp);
 
-setTimeout(popIni, 5000);
+
+if(sessionStorage.getItem("seen") == "0"){
+    
+    setTimeout(popIni, 5000);
+}
+
+
+    
+
+
+
 
 
 //VALIDACIón DEL FORMULARIO DEL POPup
@@ -199,8 +225,8 @@ function introduceD(event) {
     
 }
 
-correo.addEventListener('change', introduceD);
-nombre.addEventListener('change', introduceN);
+correo.addEventListener('input', introduceD); //Evento cambiado para que el color cambie en tiempo real
+nombre.addEventListener('input', introduceN);
 
 
 //RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing + COMPROBAR QUE NO EXISTEN ERRORES
@@ -229,6 +255,7 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
           .then( response => {
             if (response.ok){
               console.log("No hubo errores");
+              
             }else{
               console.log("Hubo un error");
             }
@@ -240,6 +267,7 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
           }));
           const formuId= "#formulario";
           clearForm(formuId);
+          document.getElementById("formButton").disabled= "true";//SOLO se puede enviar el formulario una vez
           alert("ENVIADO CON ÉXITO");
     }else{
         alert("NO ENTRÓ");//Aquí podría manipular el mensaje cuando no es correcto
@@ -263,8 +291,10 @@ const clearForm = (formulario) => {
     //SOLO CON ESTA PROPIEDAD, FUNCIONA
     const sentConfirm = () => {
         document.querySelector('#formulario').reset();
+        nombre.style.borderBottom = "1px solid #95989A";
+        correo.style.borderBottom ="1px solid #95989A";
     }
-    setTimeout(sentConfirm, 5000);
+    setTimeout(sentConfirm, 2000);
     
 }
 

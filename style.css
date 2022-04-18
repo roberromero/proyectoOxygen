@@ -122,15 +122,21 @@ nav{
 
 /* POP-UP */
 .popup{
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
+    height: 100%;
     z-index: 2;
-   visibility: hidden;
+    visibility: hidden;
+}
+#form-popup{
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
 }
 .popup__cont{
+
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     text-align: center;
     border-bottom: rgba(0, 0, 0, 0.2);
@@ -148,6 +154,7 @@ nav{
     padding-top: 15px;
     
 }
+
 .form-divs{
     padding: 16px;
     text-align: left;
@@ -184,6 +191,14 @@ nav{
     outline: none;
     background-color: transparent;
     width: 100%;
+}
+
+#correo-popup:focus:valid{
+    
+    border-bottom: 2px solid #55DFB4;
+}
+#correo-popup:focus:invalid{
+    border-bottom: 2px solid red;
 }
 /*MAIN*/
 
@@ -1019,6 +1034,7 @@ hr{
     color:#707070;
     
 }
+
 
 /*FOOTER*/
 
