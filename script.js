@@ -33,7 +33,7 @@ menuEquis.addEventListener('click', closeMenu);
 
 
 
-sessionStorage.setItem("seen", "0");//Variable para almacenar si el popUp se ha visto//******/
+localStorage.setItem("seen", "0");//Variable para almacenar si el popUp se ha visto//******/
 
 //SCROLLBAR
 
@@ -55,10 +55,10 @@ let rep = true;
         if(rep == true && Math.round(percent)==25){
             //Llamo a la función---------
            
-            if(sessionStorage.getItem("seen") == "0"){
+            if(localStorage.getItem("seen") == "0"){
                 
                 popIni();
-                sessionStorage.setItem("seen", "1");
+                localStorage.setItem("seen", "1");
             }
                  
                 
@@ -77,9 +77,9 @@ const popUp = document.getElementById('pop'); //VENTANA COMPLETA DEL POPUP
 const xPopUp = document.getElementById('x-popup'); // X PARA CERRARLO 
 
 const popIni = ()=> {
-    if(sessionStorage.getItem("seen") == "0"){
+    if(localStorage.getItem("seen") == "0"){
         popUp.style.visibility= "visible";
-        sessionStorage.setItem("seen", "1");
+        localStorage.setItem("seen", "1");
     }
     
     
@@ -91,13 +91,11 @@ const closePopUp = () => {
 xPopUp.addEventListener('click', closePopUp);
 
 
-if(sessionStorage.getItem("seen") == "0"){
+if(localStorage.getItem("seen") == "0"){
     
     setTimeout(popIni, 5000);
 }
 
-
-    
 
 
 
@@ -135,9 +133,14 @@ formuPopUp.addEventListener('submit', (e)=> {
               console.log(`Hubo el siguiente error:  ${err} y el tipo de dato que devuelve el método catch es: ${typeof err}`);
           }));
           clearFormPopUp();
-          alert("ENVIADO CON ÉXITO");
+          document.getElementById("text-popup2").innerText="Successfully sent!";
+          document.getElementById("popFormSent").style.visibility="visible";
+          document.getElementById("send-popup2").addEventListener('click', closePopUp2);
+          
     }else{
-        alert("NO COMPLETADO");
+        document.getElementById("text-popup2").innerText="Unsuccessful. Please, try again"
+        document.getElementById("popFormSent").style.visibility="visible";
+        document.getElementById("send-popup2").addEventListener('click', closePopUp2);
     }
 
 
@@ -228,9 +231,13 @@ function introduceD(event) {
 correo.addEventListener('input', introduceD); //Evento cambiado para que el color cambie en tiempo real
 nombre.addEventListener('input', introduceN);
 
+//CERRAR EL POPUP2 del envio    
+const closePopUp2= ()=> {
+    document.getElementById("popFormSent").style.visibility= "hidden";
+}
 
+        
 //RECOGER DATOS DEL FORMULARIO Y MANDÁRSELOS A UN SERVIDOR JSON de testing + COMPROBAR QUE NO EXISTEN ERRORES
-
 
 document.querySelector('#formulario').addEventListener('submit', (event)=> {
     event.preventDefault();
@@ -238,9 +245,10 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
     let nameIsValid = expRegularNombre.test(nombre.value);
     let correoIsValid = /(\w+)\@(\w+)\.(\w+)$/gi.test(correo.value);
     let checkBoxIsValid = aceptar.checked;
-  
+
+   
+
     if( nameIsValid && correoIsValid && checkBoxIsValid ){
-        console.log("ENTRO");
         
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
@@ -268,15 +276,22 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
           const formuId= "#formulario";
           clearForm(formuId);
           document.getElementById("formButton").disabled= "true";//SOLO se puede enviar el formulario una vez
-          alert("ENVIADO CON ÉXITO");
+          document.getElementById("popFormSent").style.visibility="visible";
+          document.getElementById("send-popup2").addEventListener('click', closePopUp2);
+          
     }else{
         alert("NO ENTRÓ");//Aquí podría manipular el mensaje cuando no es correcto
-        console.log("no entró");
-    }
+        
 
- 
+    }
+  
 
 })
+
+
+
+
+
 
 //FUNCIÓN PARA LIMPIAR EL FORMULARIO
 const clearForm = (formulario) => {

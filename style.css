@@ -200,6 +200,28 @@ nav{
 #correo-popup:focus:invalid{
     border-bottom: 2px solid red;
 }
+
+/*PopUpSENT*/
+
+.popup2{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.popup2__cont{
+
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px #777575;
+    background-color: #F7F7F7;
+    padding: 10px 10px 0 10px;
+}
 /*MAIN*/
 
 .main{
@@ -977,8 +999,11 @@ hr{
     outline: none;
     background-color: transparent;
 }
+#fname, #correo{
+    outline: none;
+}
 #fname:hover, #correo:hover{
-    outline: 2px ridge rgba(15, 153, 208, 0.6);
+    /* outline: 2px ridge rgba(15, 153, 208, 0.6); */
     border-radius: 1px;
 }
 /* #fname:invalid:focus{
