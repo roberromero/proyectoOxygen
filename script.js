@@ -173,7 +173,7 @@ const returnTopFun = () => {
             clearInterval(inter);
             stop=true;
         }
-        
+
         let ini= window.pageYOffset;
         let stop= false;
         
@@ -308,6 +308,7 @@ document.querySelector('#formulario').addEventListener('submit', (event)=> {
           clearForm(formuId);
           document.getElementById("formButton").disabled= "true";//SOLO se puede enviar el formulario una vez
           document.getElementById("popFormSent").style.visibility="visible";
+          document.getElementById("text-popup2").innerText="Successfully sent!";/*------------*/
           document.getElementById("send-popup2").addEventListener('click', closePopUp2);
           
     }else{
