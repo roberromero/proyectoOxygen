@@ -31,6 +31,13 @@ menuBurger.addEventListener('click', openMenu);
 //Cuando clicamos la equis se pliega
 menuEquis.addEventListener('click', closeMenu);
 
+//OCULTAR MENU CUANDO PINCHAS UN ENLACE
+const aLinks= document.getElementsByClassName("list__item-a");
+
+for (const iterator of aLinks) {
+    iterator.addEventListener('click', closeMenu);
+}
+
 
 
 localStorage.setItem("seen", "0");//Variable para almacenar si el popUp se ha visto//******/
@@ -155,12 +162,37 @@ let returnTop = document.getElementById('returnTop');
 
 //Toma el objeto "window" y escrolea hasta la posición indicada
 const returnTopFun = () => {
-    window.scroll({
-        top: 0,
-        left: 100,
-        behavior: 'smooth'//NO PARECE QUE HAGA EFECTO ¿Por qué?
-      });
+        // window.scroll({
+        //         top: 0,
+        //         left: 100,
+        //         behavior: 'smooth'
+                
+        //     });
+        
+        const fun = ()=> {
+            clearInterval(inter);
+            stop=true;
+        }
+        
+        let ini= window.pageYOffset;
+        let stop= false;
+        
+        const inter= setInterval(() => {
+           
+            if (ini > 0 && stop==false){
+                ini= ini-10;
+                window.scrollTo(0, ini);
+                document.addEventListener('click', fun);
+            }else{
+                clearInterval(inter);
+            }
+        }, 10);
+             
+ 
+    
 }
+
+
 //Recibe a la función anterior y la ralentiza 200 milisegs.
 const delayTop = () => {
     window.setTimeout(returnTopFun, 200);
@@ -168,7 +200,6 @@ const delayTop = () => {
 
 //Tras click al botón flecha llama a "delayTop"
 returnTop.addEventListener('click', delayTop);
-
 
 //VALIDACIÓN DEL FORMULARIO
 
